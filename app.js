@@ -19,7 +19,7 @@ app.listen(3000, () => {
 app.use(express.static(__dirname));
 
 app.get('/', (req, res) => {
-    res.render(__dirname+'/index.html');
+    res.render(__dirname+'/views/index.ejs');
 });
 
 app.get('/registration', (req, res) => {
@@ -27,9 +27,9 @@ app.get('/registration', (req, res) => {
         first_name: req.query.yourname,
         email : req.query.youremail,
     };
-    console.log(response);
+    //console.log(response);
     //res.end(JSON.stringify(response));
-    res.sendFile(__dirname+'/registration.html');
+    res.render(__dirname+'/views/registration.ejs',response);
 });
 
 app.post('/registration/registration2', urlencodedParser, (req, res) => {
