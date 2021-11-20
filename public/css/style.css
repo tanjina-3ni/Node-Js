@@ -1,0 +1,8 @@
+.form_wrapper {
+    background-color: aliceblue;
+    border: 1px solid skyblue;
+    border-radius: 6px;
+    width: 50%;
+    margin: 15px;
+    padding: 40px;
+}

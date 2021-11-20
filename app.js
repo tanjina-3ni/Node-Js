@@ -16,7 +16,7 @@ app.listen(3000, () => {
 });
 
 // serve your css as static
-app.use(express.static(__dirname));
+app.use('/css',express.static(__dirname +'/public/css'));
 
 app.get('/', (req, res) => {
     res.render(__dirname+'/views/index.ejs');
